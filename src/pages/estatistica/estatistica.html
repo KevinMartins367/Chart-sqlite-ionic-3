@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar color="bordas">
+    <ion-title text-center>Estatistica</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <div class="row">
+      
+      <ion-scroll scrollX="true" style="width:800px; height:400px;">
+
+          <ion-card nowrap style="width:700px; height:400px;">
+
+                  <canvas baseChart width="800" height="400"
+                              [datasets]="lineChartData"
+                              [labels]="lineChartLabels"
+                              [options]="lineChartOptions"
+                              [colors]="lineChartColors"
+                              [legend]="lineChartLegend"
+                              [chartType]="lineChartType"
+                              (chartHover)="chartHovered($event)"
+                              (chartClick)="chartClicked($event)">
+                  </canvas>
+          </ion-card>
+      </ion-scroll>
+    </div>
+    <div>
+      <ion-item class="no-bottom-border item">
+          <button ion-button large full clear color="bordas" class="timer-button timer-text">{{imc}} kg/m²</button>
+      </ion-item>
+    </div>
+  </ion-card>
+
+  <ion-fab bottom right>
+    <button ion-fab color="bordas" (click)="openPage()">
+      <ion-icon ios="ios-create" md="md-create" color="light"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

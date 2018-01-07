@@ -1,0 +1,30 @@
+page-estatistica {
+
+  body {
+
+  }
+
+  .braco{
+    background-image: url("img/brawn.png");
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%;
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table > tbody > tr > td {
+    padding: 8px;
+    line-height: 1.4;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+  table > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+  }
+
+}

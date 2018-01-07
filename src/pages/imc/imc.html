@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="bordas">
+    <ion-title text-center>Seu IMC</ion-title>
+    <ion-buttons end>
+      <a ion-button icon-only><ion-icon ios="ios-speedometer" md="md-speedometer"></ion-icon></a>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <form >
+      <ion-item>
+        <ion-label>Height</ion-label>
+        <ion-input type="number" pattern="[0-9]*" name="Height" [(ngModel)]="height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Weight</ion-label>
+        <ion-input type="number" pattern="[0-9]*" name="Weight" [(ngModel)]="weight"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Goal</ion-label>
+        <ion-input type="number" pattern="[0-9]*" name="goal" [(ngModel)]="goal"></ion-input>
+      </ion-item>
+      <br>
+      <br>
+      <br>
+      <button ion-button type="submit" color="bordas" block (click)="getUser()">update the information</button>
+    </form>
+
+
+</ion-content>
